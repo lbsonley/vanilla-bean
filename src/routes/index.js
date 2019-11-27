@@ -1,4 +1,3 @@
-import axios from "axios";
 import Hogan from "hogan.js";
 import { defaultView } from "../views";
 
