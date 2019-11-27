@@ -1,0 +1,4 @@
+# netlify redirects
+# redirects all traffic back to index.html so page.js can handle routing
+
+/*  /index.html 200

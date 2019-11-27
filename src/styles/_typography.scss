@@ -1,0 +1,54 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: sans-serif;
+  color: map-get($colors, anthracite);
+}
+
+h1 {
+  font-size: 3.5rem;
+  line-height: 1;
+  margin-top: 4rem;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 1;
+  margin-top: 3rem;
+  margin-bottom: 0;
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 1;
+  margin-top: 3rem;
+  margin-bottom: 0;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-top: 1.6rem;
+  margin-bottom: 0;
+}
+
+a {
+  color: map-get($colors, theme);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    color: map-get($colors, theme-dark);
+  }
+}
+
+blockquote {
+  border-left: 3px solid map-get($colors, theme);
+  margin: 1.6rem 0 1.6rem 1rem;
+  padding: 1rem 0 1rem 2rem;
+  font-style: italic;
+  line-height: 1.8;
+}

@@ -1,6 +1,7 @@
-$body-color: slateblue;
+@import "~normalize.css";
+@import "./colors";
+@import "./spaces";
+@import "./typography";
+@import "./layout";
 
-body {
-  color: $body-color;
-  font-family: sans-serif;
-}
+

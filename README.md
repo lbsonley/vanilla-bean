@@ -11,14 +11,17 @@ mkdir my-app
 
 cd my-app
 
+# clone repo
 git clone https://github.com/lbsonley/vanilla-bean.git .
 
+# remove and re-init git
 rm -rf .git
-
 git init
 
+# install dependencies
 npm i
 
+# initialize husky
 husky
 ```
 
@@ -36,14 +39,14 @@ npm start
 npm run build
 ```
 
-### Features:
+## Features
 
-* Routing via [page.js]()
-* Templating via [hogan.js]()
+* Routing via [page.js](https://visionmedia.github.io/page.js/)
+* Templating via [hogan.js](http://twitter.github.io/hogan.js/)
 * ES6 Support via [babel](https://babeljs.io/) (v7)
 * SASS Support via [sass-loader](https://github.com/jtangelder/sass-loader)
 * Linting via [eslint-loader](https://github.com/MoOx/eslint-loader)
-* Prettier via [prettier]()
-* Precommit hooks via [husky]
+* Prettier via [prettier](https://prettier.io/)
+* Precommit hooks via [husky](https://github.com/typicode/husky)
 
 When you run `npm run build` we use the [mini-css-extract-plugin](https://github.com/webpack-contrib/mini-css-extract-plugin) to move the css to a separate file. The css file gets included in the head of the `index.html`.

@@ -1,0 +1,46 @@
+$spaces: (
+  xs: 8px,
+  sm: 16px,
+  md: 32px,
+  lg: 64px,
+  xl: 128px
+);
+
+@mixin makeSpacingUtils() {
+  $properties: ('margin', 'padding');
+  $dimensions: ('x', 'y', 't', 'b', 'l', 'r');
+
+  @each $property in $properties {
+    $abbr: 'm';
+    @if $property == 'padding' { $abbr: 'p' }
+
+    @each $dim in $dimensions {
+      @each $size, $space in $spaces {
+        .#{$abbr}#{$dim}-#{$size} {
+          @if $dim == 'x' {
+            #{$property}-right: map-get($spaces, #{$size}) !important;
+            #{$property}-left: map-get($spaces, #{$size}) !important;
+          }
+          @if $dim == 'l' {
+            #{$property}-left: map-get($spaces, #{$size}) !important;
+          }
+          @if $dim == 'r' {
+            #{$property}-right: map-get($spaces, #{$size}) !important;
+          }
+          @if $dim == 'y' {
+            #{$property}-top: map-get($spaces, #{$size}) !important;
+            #{$property}-bottom: map-get($spaces, #{$size}) !important;
+          }
+          @if $dim == 't' {
+            #{$property}-top: map-get($spaces, #{$size}) !important;
+          }
+          @if $dim == 'b' {
+            #{$property}-bottom: map-get($spaces, #{$size}) !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include makeSpacingUtils();

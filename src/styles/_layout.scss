@@ -1,0 +1,45 @@
+main {
+  flex: 1 0 auto;  
+}
+
+footer {
+  margin: map-get($spaces, lg) 0 map-get($spaces, md) 0;
+}
+
+.page-container {
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 100vh;
+  width: auto;
+  margin-top: 0;
+  margin-left: map-get($spaces, md);
+  margin-right: map-get($spaces, md);
+  margin-bottom: map-get($spaces, md);
+  @media screen and (min-width: 768px) {
+    width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.flex-grid {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 -map-get($spaces, xs);
+}
+
+@mixin makeColumns($columns: 12, $gutter: map-get($spaces, xs)) {
+  @for $i from 1 through $columns {
+    $width: ( $i / 12 ) * 100 * 1%;
+    .col-#{$i} {
+      flex-basis: 100%;
+
+      @media screen and (min-width: 768px) {
+        flex-basis: calc(#{$width} - #{2 * map-get($spaces, xs)});
+        margin: 0 map-get($spaces, xs);
+      }
+    }
+  }
+}
+
+@include makeColumns();

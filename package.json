@@ -61,6 +61,7 @@
     "node-sass": "^4.13.0",
     "prettier": "^1.19.1",
     "pretty-quick": "^2.0.1",
+    "raw-loader": "^4.0.0",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
     "webpack": "^4.41.2",
@@ -70,6 +71,9 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.7.0",
-    "core-js": "^3.4.2"
+    "core-js": "^3.4.2",
+    "hogan.js": "^3.0.2",
+    "normalize.css": "^8.0.1",
+    "page": "^1.11.5"
   }
 }
